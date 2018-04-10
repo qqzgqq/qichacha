@@ -20,7 +20,7 @@ func ExampleScrape() {
 	flag.Parse()
 	var test string = flag.Arg(0)
 	//connection mysql_database data_acquisition_development
-	DB, _ := sqlx.Open("mysql", "root:1q2w3e@tcp(127.0.0.1:3306)/data_acquisition_development?charset=utf8")
+	DB, _ := sqlx.Open("mysql", "root:1@tcp(127.0.0.1:3306)/data_acquisition_development?charset=utf8")
 
 	//goquery解析html
 	doc, err := goquery.NewDocument(test)
@@ -102,4 +102,3 @@ func main() {
 	ExampleScrape()
 
 }
-
